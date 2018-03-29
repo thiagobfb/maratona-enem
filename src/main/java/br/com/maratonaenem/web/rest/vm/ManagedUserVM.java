@@ -1,7 +1,7 @@
 package br.com.maratonaenem.web.rest.vm;
 
 import br.com.maratonaenem.service.dto.UserDTO;
-import javax.validation.constraints.Size;
+//import javax.validation.constraints.Size;
 
 /**
  * View Model extending the UserDTO, which is meant to be used in the user management UI.

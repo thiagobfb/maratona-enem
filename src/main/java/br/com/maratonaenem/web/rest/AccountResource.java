@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.security.Principal;
-import java.util.*;
+//import java.util.*;
 
 /**
  * REST controller for managing the current user's account.
@@ -53,7 +53,6 @@ public class AccountResource {
      */
     @GetMapping("/account")
     @Timed
-    @SuppressWarnings("unchecked")
     public UserDTO getAccount(Principal principal) {
         if (principal != null) {
             if (principal instanceof OAuth2Authentication) {

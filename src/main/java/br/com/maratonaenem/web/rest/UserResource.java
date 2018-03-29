@@ -57,7 +57,8 @@ public class UserResource {
 
     private final Logger log = LoggerFactory.getLogger(UserResource.class);
 
-    private final UserRepository userRepository;
+    @SuppressWarnings("unused")
+	private final UserRepository userRepository;
 
     private final UserService userService;
 

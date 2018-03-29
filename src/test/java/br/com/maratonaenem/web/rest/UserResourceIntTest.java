@@ -1,7 +1,7 @@
 package br.com.maratonaenem.web.rest;
 
 import br.com.maratonaenem.MaratonaEnemApp;
-import br.com.maratonaenem.config.CacheConfiguration;
+//import br.com.maratonaenem.config.CacheConfiguration;
 import br.com.maratonaenem.domain.Authority;
 import br.com.maratonaenem.domain.User;
 import br.com.maratonaenem.repository.UserRepository;
@@ -12,8 +12,8 @@ import br.com.maratonaenem.service.UserService;
 import br.com.maratonaenem.service.dto.UserDTO;
 import br.com.maratonaenem.service.mapper.UserMapper;
 import br.com.maratonaenem.web.rest.errors.ExceptionTranslator;
-import br.com.maratonaenem.web.rest.vm.ManagedUserVM;
-import org.apache.commons.lang3.RandomStringUtils;
+//import br.com.maratonaenem.web.rest.vm.ManagedUserVM;
+//import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -47,26 +47,34 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class UserResourceIntTest {
 
     private static final String DEFAULT_LOGIN = "johndoe";
-    private static final String UPDATED_LOGIN = "jhipster";
+    @SuppressWarnings("unused")
+	private static final String UPDATED_LOGIN = "jhipster";
 
     private static final String DEFAULT_ID = "id1";
 
-    private static final String DEFAULT_PASSWORD = "passjohndoe";
+    @SuppressWarnings("unused")
+	private static final String DEFAULT_PASSWORD = "passjohndoe";
+    @SuppressWarnings("unused")
     private static final String UPDATED_PASSWORD = "passjhipster";
 
     private static final String DEFAULT_EMAIL = "johndoe@localhost";
+    @SuppressWarnings("unused")
     private static final String UPDATED_EMAIL = "jhipster@localhost";
 
     private static final String DEFAULT_FIRSTNAME = "john";
+    @SuppressWarnings("unused")
     private static final String UPDATED_FIRSTNAME = "jhipsterFirstName";
 
     private static final String DEFAULT_LASTNAME = "doe";
+    @SuppressWarnings("unused")
     private static final String UPDATED_LASTNAME = "jhipsterLastName";
 
     private static final String DEFAULT_IMAGEURL = "http://placehold.it/50x50";
+    @SuppressWarnings("unused")
     private static final String UPDATED_IMAGEURL = "http://placehold.it/40x40";
 
     private static final String DEFAULT_LANGKEY = "en";
+    @SuppressWarnings("unused")
     private static final String UPDATED_LANGKEY = "fr";
 
     @Autowired

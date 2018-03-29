@@ -1,7 +1,6 @@
 package br.com.maratonaenem.service.dto;
 
 import br.com.maratonaenem.config.Constants;
-
 import br.com.maratonaenem.domain.Authority;
 import br.com.maratonaenem.domain.User;
 
@@ -37,6 +36,8 @@ public class UserDTO {
 
     @Size(max = 256)
     private String imageUrl;
+    
+    private AlunoDTO aluno;
 
     private boolean activated = false;
 
@@ -123,7 +124,15 @@ public class UserDTO {
         this.imageUrl = imageUrl;
     }
 
-    public boolean isActivated() {
+    public AlunoDTO getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(AlunoDTO aluno) {
+		this.aluno = aluno;
+	}
+
+	public boolean isActivated() {
         return activated;
     }
 

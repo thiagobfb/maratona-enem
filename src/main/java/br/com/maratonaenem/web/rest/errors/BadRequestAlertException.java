@@ -9,7 +9,9 @@ import java.util.Map;
 
 public class BadRequestAlertException extends AbstractThrowableProblem {
 
-    private final String entityName;
+	private static final long serialVersionUID = -8200046234338618260L;
+
+	private final String entityName;
 
     private final String errorKey;
 

@@ -1,0 +1,21 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tipoDisciplina",
+            "fieldType": "TipoDisciplina",
+            "fieldValues": "EXATAS,HUMANAS"
+        }
+    ],
+    "changelogDate": "20180325045131",
+    "entityTableName": "disciplina",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

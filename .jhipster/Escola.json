@@ -1,0 +1,21 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tipoEscola",
+            "fieldType": "TipoEscola",
+            "fieldValues": "PUBLICA,PARTICULAR"
+        }
+    ],
+    "changelogDate": "20180325045130",
+    "entityTableName": "escola",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

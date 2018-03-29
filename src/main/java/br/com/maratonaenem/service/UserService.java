@@ -1,6 +1,5 @@
 package br.com.maratonaenem.service;
 
-import br.com.maratonaenem.config.CacheConfiguration;
 import br.com.maratonaenem.domain.Authority;
 import br.com.maratonaenem.domain.User;
 import br.com.maratonaenem.repository.AuthorityRepository;
@@ -22,6 +21,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Service;
+//import br.com.maratonaenem.config.CacheConfiguration;
 
 import java.time.Instant;
 import java.util.*;
@@ -149,7 +149,8 @@ public class UserService {
      * @param authentication OAuth2 authentication
      * @return the user from the authentication
      */
-    public UserDTO getUserFromAuthentication(OAuth2Authentication authentication) {
+    @SuppressWarnings("unchecked")
+	public UserDTO getUserFromAuthentication(OAuth2Authentication authentication) {
         Map<String, Object> details = (Map<String, Object>) authentication.getUserAuthentication().getDetails();
         User user = getUser(details);
         Set<Authority> userAuthorities = extractAuthorities(authentication, details);
@@ -208,7 +209,8 @@ public class UserService {
         return token;
     }
 
-    private static Set<Authority> extractAuthorities(OAuth2Authentication authentication, Map<String, Object> details) {
+    @SuppressWarnings("unchecked")
+	private static Set<Authority> extractAuthorities(OAuth2Authentication authentication, Map<String, Object> details) {
         Set<Authority> userAuthorities;
         // get roles from details
         if (details.get("roles") != null) {

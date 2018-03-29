@@ -17,7 +17,7 @@ import java.util.HashSet;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
-import java.time.Instant;
+//import java.time.Instant;
 
 /**
  * A user.
@@ -61,6 +61,9 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Size(max = 256)
     @Field("image_url")
     private String imageUrl;
+    
+    @Field("aluno")
+    private Aluno aluno;
 
     @JsonIgnore
     private Set<Authority> authorities = new HashSet<>();
@@ -114,7 +117,15 @@ public class User extends AbstractAuditingEntity implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public boolean getActivated() {
+    public Aluno getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(Aluno aluno) {
+		this.aluno = aluno;
+	}
+
+	public boolean getActivated() {
         return activated;
     }
 
@@ -166,6 +177,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
             ", imageUrl='" + imageUrl + '\'' +
             ", activated='" + activated + '\'' +
             ", langKey='" + langKey + '\'' +
+            ", aluno='" + aluno + '\'' +
             "}";
     }
 }
